@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/forms.css">
-</head>
+</head> 
 <body>
     <header>
         <h1 class="page-header">Josue Arteaga</h1>
@@ -19,6 +19,7 @@
             <a href="https://joeart15.github.io/stylin-with-css/" target="_blank">Stylin With CSS</a>
             <a href="https://joeart15.github.io/selectors/" target="_blank">Selectors</a>
             <a href="https://joeart15.github.io/positioningfixed/" target="_blank">Positioning</a>
+            <a href="https://joeart15.github.io/time-of-day/" target="_blank">Time of Day</a>
             <a href="https://github.com/joeart15" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/josuearteaga/" target="_blank">LinkedIn</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
@@ -95,6 +96,10 @@
             </section>
         </div>
         
+        <div class="iframe-container">
+            <iframe src="https://www.codesters.com/embed/v1/preview/7a98dcc18d1d47b9a53f866e7a504fe7/" height="680" width="500"></iframe>
+        </div>
+
         <footer>
             <p><small>&copy; 2023-<span id="this-year"></span> by 
                 Josue Arteaga, All Rights Reserved ~ 
@@ -102,7 +107,6 @@
                 <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
             </p>
         </footer>
-        
     </main>
      
     <script>
@@ -110,6 +114,7 @@
         document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href); 
         let d = new Date(); let thisYear = d.getFullYear();
         document.getElementById("this-year").innerHTML = thisYear;
+
         function myFunction() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
@@ -117,7 +122,24 @@
             } else {
                 x.className = "topnav";
             }
-        }   
+        }
+
+        // Prevent arrow key scrolling globally and handle iframe interaction
+        document.addEventListener('keydown', function(event) {
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+                event.preventDefault();
+            }
+        });
+
+        const iframe = document.querySelector('iframe');
+
+        iframe.addEventListener('load', function() {
+            iframe.contentWindow.addEventListener('keydown', function(event) {
+                if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+                    event.preventDefault();
+                }
+            });
+        });
     </script>
 </body>
 </html>

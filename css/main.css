@@ -1,5 +1,5 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* Global Styling */
 * {
@@ -9,21 +9,22 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a45);
     line-height: 1.6;
     padding: 20px;
 }
 
 /* Layout Wrappers */
 .wrapper {
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background: #2c2c3e;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
 }
 
 /* Header */
@@ -33,15 +34,17 @@ header {
 }
 
 header h1.page-header {
-    font-size: 2.5rem;
-    color: #333;
+    font-size: 3rem;
+    color: #ffffff;
     margin-bottom: 10px;
     font-weight: 700;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    letter-spacing: 2px;
 }
 
 header p {
     font-size: 1rem;
-    color: #555;
+    color: #bbbbbb;
 }
 
 /* Navigation */
@@ -49,44 +52,49 @@ header p {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    background-color: #0073e6;
+    background: #3b3b5e;
     border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .topnav a {
-    color: #fff;
+    color: #e0e0e0;
     padding: 15px 20px;
     text-decoration: none;
     font-size: 1rem;
-    transition: background 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .topnav a:hover {
-    background-color: #005bb5;
+    background: linear-gradient(135deg, #0073e6, #00c6ff);
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.4);
 }
 
 /* Section Headings */
 h2 {
-    font-size: 1.8rem;
-    color: #0073e6;
-    border-bottom: 2px solid #0073e6;
+    font-size: 2rem;
+    color: #00c6ff;
     margin-bottom: 20px;
     padding-bottom: 10px;
     text-align: left;
+    border-bottom: 2px solid #00c6ff;
 }
 
 h3 {
-    font-size: 1.4rem;
-    color: #333;
+    font-size: 1.5rem;
+    color: #ffffff;
     margin-top: 20px;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 /* Content Styling */
 p {
     font-size: 1rem;
     margin: 15px 0;
-    color: #555;
+    color: #d0d0d0;
     line-height: 1.8;
 }
 
@@ -102,12 +110,30 @@ li {
 
 /* Image Styling */
 .profile img {
-    width: 200%;
-    max-width: 250px;
+    width: 100%;
+    max-width: 200px;
     border-radius: 50%;
     margin: 20px auto;
     display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    border: 3px solid #00c6ff;
+}
+
+/* Iframe Styling */
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.iframe-container iframe {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    max-width: 100%;
+    width: 500px;
+    height: 680px;
 }
 
 /* Footer */
@@ -115,36 +141,40 @@ footer {
     text-align: center;
     margin-top: 40px;
     font-size: 0.9rem;
-    color: #888;
+    color: #888888;
 }
 
 /* Links */
 a {
-    color: #0073e6;
+    color: #00c6ff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:hover {
-    color: #005bb5;
-    text-decoration: underline;
+    color: #0073e6;
+    text-shadow: 0px 4px 10px rgba(0, 123, 255, 0.4);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     h1.page-header {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     
     p {
         font-size: 0.95rem;
+    }
+
+    .iframe-container iframe {
+        height: auto;
     }
 }
