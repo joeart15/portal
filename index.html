@@ -14,15 +14,22 @@
     <header>
         <h1 class="page-header">Josue Arteaga</h1>
         <nav class="topnav" id="myTopnav">
-            <a href="index.html" class="active">Home</a>
-            <a href="https://joeart15.github.io/html.elements/" target="_blank">HTML Elements</a>
-            <a href="https://joeart15.github.io/stylin-with-css/" target="_blank">Stylin With CSS</a>
-            <a href="https://joeart15.github.io/selectors/" target="_blank">Selectors</a>
-            <a href="https://joeart15.github.io/positioningfixed/" target="_blank">Positioning</a>
-            <a href="https://joeart15.github.io/time-of-day/" target="_blank">Time of Day</a>
-            <a href="https://github.com/joeart15" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/josuearteaga/" target="_blank">LinkedIn</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <!-- Hamburger Icon -->
+            <span class="icon" onclick="toggleMenu()">&#9776;</span>
+            
+            <!-- Links Container -->
+            <div class="menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="https://joeart15.github.io/html.elements/" target="_blank">HTML Elements</a>
+                <a href="https://joeart15.github.io/stylin-with-css/" target="_blank">Stylin With CSS</a>
+                <a href="https://joeart15.github.io/selectors/" target="_blank">Selectors</a>
+                <a href="https://joeart15.github.io/positioningfixed/" target="_blank">Positioning</a>
+                <a href="https://joeart15.github.io/time-of-day/" target="_blank">Time of Day</a>
+                <a href="https://joeart15.github.io/daily-grind/" target="_blank">Daily Grind</a>
+                <a href="https://joeart15.github.io/creatures/" target="_blank">Creatures</a>
+                <a href="https://github.com/joeart15" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/josuearteaga/" target="_blank">LinkedIn</a>
+            </div>
         </nav>
     </header>
      
@@ -141,5 +148,13 @@
             });
         });
     </script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.topnav .menu'); // Select the menu
+            menu.classList.toggle('show'); // Toggle the 'show' class to show/hide menu
+        }
+    </script>
+    
+    
 </body>
 </html>
